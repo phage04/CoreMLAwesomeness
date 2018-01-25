@@ -72,8 +72,6 @@
                             <constraint firstItem="UMj-q0-pOd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S5Z-z3-DU6"/>
                             <constraint firstItem="UMj-q0-pOd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wzj-zW-YaE"/>
                             <constraint firstItem="VIg-DN-wqO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kH1-4A-zXX"/>
-                            <constraint firstItem="VIg-DN-wqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kqa-4g-nAh"/>
-                            <constraint firstItem="VIg-DN-wqO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="mFP-9R-djA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
