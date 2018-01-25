@@ -44,9 +44,27 @@ class ImageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func makePrediction(_ image: UIImage) {
-        
+        guard let model = try? VNCoreMLModel(for: MobileNet().model) else { return }
+        let request = VNCoreMLRequest(model: model, completionHandler: handleResults)
+        let handler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
+        do {
+            try handler.perform([request])
+        }catch {
+            debugPrint("ERROR: ", error)
+        }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ImageCell else {return}
+        makePrediction(cell.imageView.image!)
+    }
+    
+    func handleResults(request: VNRequest, error: Error?){
+        guard let results = request.results as? [VNClassificationObservation] else {return}
+        for result in results {
+            print(result.identifier)
+        }
+    }
 
 }
 
