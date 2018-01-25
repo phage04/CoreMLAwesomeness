@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ImageVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageVC" customModule="CoreMLAwesomeness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UMj-q0-pOd">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="Ba2-jP-7N1"/>
+                                    <constraint firstAttribute="width" constant="375" id="xB6-G0-TJk"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="Q4y-qu-0ix" customClass="GridFlowLayout" customModule="CoreMLAwesomeness" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="NGG-a5-jbg" customClass="ImageCell" customModule="CoreMLAwesomeness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aed-nF-fEZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Aed-nF-fEZ" firstAttribute="leading" secondItem="NGG-a5-jbg" secondAttribute="leading" id="RRT-xl-Cfs"/>
+                                            <constraint firstItem="Aed-nF-fEZ" firstAttribute="top" secondItem="NGG-a5-jbg" secondAttribute="top" id="U9M-QO-LTG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Aed-nF-fEZ" secondAttribute="trailing" id="kCw-yx-ho7"/>
+                                            <constraint firstAttribute="bottom" secondItem="Aed-nF-fEZ" secondAttribute="bottom" id="tex-he-rj1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Aed-nF-fEZ" id="pTa-zR-nLP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAP ON ANY PHOTO ABOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-DN-wqO">
+                                <rect key="frame" x="0.0" y="586" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZRA-SU-VYj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VIg-DN-wqO" firstAttribute="top" secondItem="UMj-q0-pOd" secondAttribute="bottom" constant="65" id="RBc-Mu-sPQ"/>
+                            <constraint firstItem="UMj-q0-pOd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S5Z-z3-DU6"/>
+                            <constraint firstItem="UMj-q0-pOd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wzj-zW-YaE"/>
+                            <constraint firstItem="VIg-DN-wqO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kH1-4A-zXX"/>
+                            <constraint firstItem="VIg-DN-wqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kqa-4g-nAh"/>
+                            <constraint firstItem="VIg-DN-wqO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="mFP-9R-djA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="VIg-DN-wqO" id="JQr-gM-Wjn"/>
+                        <outlet property="collectionView" destination="UMj-q0-pOd" id="pL4-Uv-myM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
