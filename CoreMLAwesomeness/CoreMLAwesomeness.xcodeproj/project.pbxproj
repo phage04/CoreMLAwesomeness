@@ -15,6 +15,7 @@
 		DE553633201A6B8C001B2D1A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE553632201A6B8C001B2D1A /* ImageCell.swift */; };
 		DE553635201A6E10001B2D1A /* FoodItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE553634201A6E10001B2D1A /* FoodItems.swift */; };
 		DE553637201A701B001B2D1A /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE553636201A701B001B2D1A /* GridFlowLayout.swift */; };
+		DE55363B201A7445001B2D1A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE55363A201A7445001B2D1A /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DE553632201A6B8C001B2D1A /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		DE553634201A6E10001B2D1A /* FoodItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItems.swift; sourceTree = "<group>"; };
 		DE553636201A701B001B2D1A /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		DE55363A201A7445001B2D1A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		DE553631201A6166001B2D1A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE55363A201A7445001B2D1A /* MobileNet.mlmodel */,
 				DE553634201A6E10001B2D1A /* FoodItems.swift */,
 			);
 			path = Resources;
@@ -171,6 +174,7 @@
 			files = (
 				DE553635201A6E10001B2D1A /* FoodItems.swift in Sources */,
 				DE553620201A6141001B2D1A /* ImageVC.swift in Sources */,
+				DE55363B201A7445001B2D1A /* MobileNet.mlmodel in Sources */,
 				DE553637201A701B001B2D1A /* GridFlowLayout.swift in Sources */,
 				DE55361E201A6141001B2D1A /* AppDelegate.swift in Sources */,
 				DE553633201A6B8C001B2D1A /* ImageCell.swift in Sources */,

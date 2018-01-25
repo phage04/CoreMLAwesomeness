@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class ImageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var bottomLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,10 @@ class ImageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         cell.configureCell(image)
         
         return cell
+    }
+    
+    func makePrediction(_ image: UIImage) {
+        
     }
     
 
